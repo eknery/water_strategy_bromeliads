@@ -5,6 +5,9 @@ if(!require("ape")) install.packages("ape"); library("ape")
 ### choose directory with sequences
 dir_input = "3_trimmed_sequences/" 
 
+### choose directory with sequences
+dir_out = "4_concatenated_sequences/"
+
 ### list file names
 all_loci = list.files(path = paste0(dir_input), pattern = ".fasta")
 
@@ -64,9 +67,6 @@ n_loci = length(all_loci)
 
 ### number of species
 n_spp = length(all_spp_names)
-
-### choose directory with sequences
-dir_out = "4_concatenated_sequences/"
 
 ### export
 write.fasta(

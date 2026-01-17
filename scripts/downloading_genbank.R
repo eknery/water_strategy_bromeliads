@@ -2,14 +2,15 @@ if(!require("ape")) install.packages("ape"); library("ape")
 
 ### input directory
 dir_input = "0_data/"
+
+### exrpoting directory
+dir_out = "1_raw_sequences/"
+
 ### read acessions table
 access = read.csv(paste0(dir_input, "taxon_access.csv") )
 
 ### loci names
 all_loci = colnames(access)[colnames(access) != "taxon"]
-
-### exrpoting directory
-dir_out = "1_raw_sequences/"
 
 for(locus_name in all_loci){
   ### lines with information
