@@ -16,7 +16,7 @@ for(locus_name in all_loci){
   access_clean = access[!is.na(access[,locus_name]),]
   ### accession numbers and names
   access_num = access_clean[,locus_name]
-  access_names = access_clean$species
+  access_names = access_clean[,"taxon"]
   ### downloading sequences
   one_locus = read.GenBank( access.nb = access_num )
   ### naming sequences
