@@ -24,7 +24,7 @@ for(locus_name in all_loci){
   ### export
   write.dna(
     one_locus, 
-    file = paste0(dir_out, locus_name, "_raw.fas"), 
+    file = paste0(dir_out, locus_name, ".fasta"), 
     format = 'fasta' 
   )
   ### check

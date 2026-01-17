@@ -3,7 +3,7 @@ if(!require("seqinr")) install.packages("seqinr"); library("seqinr")
 if(!require("ape")) install.packages("ape"); library("ape")
 
 ### choose directory with sequences
-dir_input = "2_aligned_sequences/" 
+dir_input = "3_trimmed_sequences/" 
 
 ### list file names
 all_loci = list.files(path = paste0(dir_input), pattern = ".fasta")
@@ -66,13 +66,13 @@ n_loci = length(all_loci)
 n_spp = length(all_spp_names)
 
 ### choose directory with sequences
-dir_out = "5_concatenated_sequences/"
+dir_out = "4_concatenated_sequences/"
 
 ### export
 write.fasta(
   sequences = conc_loci, 
   as.string = F, 
   names = all_spp_names,
-  file.out = paste0(dir_out, n_loci,"_loci_", n_spp,"_spp.fas"),
+  file.out = paste0(dir_out, n_loci,"_loci_", n_spp,"_spp.fasta"),
   nbchar = 1000
 )
