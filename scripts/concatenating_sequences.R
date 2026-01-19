@@ -6,7 +6,7 @@ if(!require("ape")) install.packages("ape"); library("ape")
 dir_input = "3_trimmed_sequences/" 
 
 ### choose directory with sequences
-dir_out = "4_concatenated_sequences/"
+dir_out = "5_concatenated_sequences/"
 
 ### list file names
 all_loci = list.files(path = paste0(dir_input), pattern = ".fasta")
